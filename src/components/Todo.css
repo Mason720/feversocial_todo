@@ -1,0 +1,150 @@
+/** @format */
+
+.todo-container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	background-color: white;
+}
+
+.todo-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #0071ff;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+}
+.header-content {
+	display: flex;
+	align-items: center;
+}
+
+.menu-button {
+	background: none;
+	border: none;
+	color: white;
+	font-size: 1.5rem;
+	margin-right: 1rem;
+	cursor: pointer;
+}
+
+.header-title {
+	font-size: 1.25rem;
+	margin: 0;
+}
+
+.todo-main {
+	flex: 1;
+	width: 90vw;
+	margin-top: 4rem;
+	padding: 1rem;
+	background-color: white;
+}
+
+.progress-indicator {
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 1rem;
+	color: #666;
+}
+
+.todo-list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.todo-item {
+	display: flex;
+	align-items: center;
+	padding: 0.75rem;
+	border: 1px solid #ddd;
+	border-radius: 0.5rem;
+	transition: background-color 0.2s;
+}
+
+.todo-item:hover {
+	background-color: #ececec;
+}
+
+.todo-checkbox {
+	margin-right: 0.75rem;
+}
+
+.todo-text {
+	margin-right: auto;
+}
+
+.todo-text.completed {
+	color: #16cb4c;
+}
+
+.delete-button {
+	background: none;
+	border: none;
+	color: #cc4900;
+	cursor: pointer;
+	padding: 0.25rem;
+}
+
+.loading-overlay {
+	position: fixed;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.loader {
+	color: white;
+	animation: spin 1s linear infinite;
+}
+
+.todo-form {
+	position: fixed;
+	bottom: 0;
+	left: 5vw;
+	right: 5vw;
+	padding: 1rem 0;
+	width: 90vw;
+	background-color: white;
+}
+
+.input-container {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.todo-input {
+	flex: 1;
+	padding: 0.5rem;
+	border: 1px solid #ddd;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+}
+
+.add-button {
+	width: 2rem;
+	height: 2rem;
+	font-size: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
